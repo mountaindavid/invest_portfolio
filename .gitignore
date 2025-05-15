@@ -1,15 +1,16 @@
 .env
-__pycache__/
-.venv/
 .pyc
 portfolio.db
 .DS_Store
-# Default ignored files
-/shelf/
 /workspace.xml
-# Editor-based HTTP Client requests
-/httpRequests/
-# Datasource local storage ignored files
-/dataSources/
 /dataSources.local.xml
+/*.db
+*.sql~
+__pycache__/
+.venv/
+/shelf/
+/httpRequests/
+/dataSources/
 .idea/
+/var/
+/CLAUDE/

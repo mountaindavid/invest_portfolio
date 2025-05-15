@@ -1,0 +1,79 @@
+portfolio-monitor/
+│
+├── backend/                       # Бэкенд на Flask
+│   ├── app/
+│   │   ├── __init__.py            # Инициализация Flask приложения
+│   │   ├── config.py              # Конфигурация приложения
+│   │   ├── extensions.py          # Расширения Flask (DB, JWT, etc.)
+│   │   ├── models/                # Модели данных
+│   │   │   ├── __init__.py
+│   │   │   ├── user.py            # Модель пользователя
+│   │   │   ├── portfolio.py       # Модель портфеля
+│   │   │   ├── asset.py           # Модель актива (акции/облигации)
+│   │   │   └── transaction.py     # Модель транзакции (покупка/продажа)
+│   │   ├── api/                   # API эндпоинты
+│   │   │   ├── __init__.py
+│   │   │   ├── auth.py            # Аутентификация и авторизация
+│   │   │   ├── portfolio.py       # Управление портфелем
+│   │   │   ├── assets.py          # Управление активами
+│   │   │   └── analysis.py        # AI анализ
+│   │   ├── services/              # Бизнес-логика
+│   │   │   ├── __init__.py
+│   │   │   ├── yahoo_finance.py   # Сервис для работы с Yahoo Finance API
+│   │   │   ├── portfolio_service.py  # Сервис для работы с портфелями
+│   │   │   └── ai_service.py      # Сервис для AI анализа
+│   │   └── utils/                 # Вспомогательные функции
+│   │       ├── __init__.py
+│   │       └── helpers.py
+│   ├── migrations/                # Миграции базы данных
+│   ├── tests/                     # Тесты
+│   ├── run.py                     # Точка входа для запуска приложения
+│   ├── requirements.txt           # Зависимости Python
+│   └── Dockerfile                 # Dockerfile для бэкенда
+│
+├── frontend/                      # Фронтенд (React, Vue.js или другой)
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/                # Статические файлы
+│   │   ├── components/            # Компоненты интерфейса
+│   │   │   ├── Auth/              # Компоненты авторизации
+│   │   │   ├── Dashboard/         # Компоненты дашбоарда
+│   │   │   ├── Portfolio/         # Компоненты портфеля
+│   │   │   └── Analysis/          # Компоненты анализа
+│   │   ├── services/              # Сервисы для API запросов
+│   │   ├── store/                 # Управление состоянием
+│   │   ├── App.js                 # Главный компонент
+│   │   └── index.js               # Точка входа
+│   ├── package.json               # Зависимости JS
+│   └── Dockerfile                 # Dockerfile для фронтенда
+│
+├── telegram_bot/                  # Телеграм-бот
+│   ├── __init__.py
+│   ├── bot.py                     # Основной код бота
+│   ├── handlers/                  # Обработчики команд
+│   ├── services/                  # Сервисы для работы с API
+│   ├── requirements.txt           # Зависимости Python
+│   └── Dockerfile                 # Dockerfile для бота
+│
+├── ai_module/                     # Модуль AI для анализа
+│   ├── __init__.py
+│   ├── models/                    # Модели машинного обучения
+│   ├── data_processing/           # Обработка данных
+│   ├── analysis/                  # Алгоритмы анализа
+│   ├── requirements.txt           # Зависимости Python
+│   └── Dockerfile                 # Dockerfile для AI модуля
+│
+├── database/                      # Настройки базы данных
+│   ├── init/                      # Скрипты инициализации БД
+│   └── migrations/                # Скрипты миграций
+│
+├── docker-compose.yml             # Настройки Docker Compose
+├── .github/                       # GitHub Actions для CI/CD
+│   └── workflows/
+│       ├── backend_ci.yml
+│       ├── frontend_ci.yml
+│       └── deploy.yml
+│
+└── README.md                      # Документация проекта
+
+
